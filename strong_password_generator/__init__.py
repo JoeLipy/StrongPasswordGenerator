@@ -13,17 +13,18 @@ def generate_a_strong_password():
     clock = strftime("%S")
     if len(clock) == 1:
         clock = str(clock) + str(randint(0, 9))
-    password = password + the_random_character_array[int(list(clock)[1])]
+    print(int(list(clock)[randint(0, 1)]))
+    password = password + the_random_character_array[int(list(clock)[randint(0, 1)])]
     password = the_letter[randint(0, 25)]
     password = password + the_symbol[randint(0, 29)]
     for i in range(3):
         password = password + the_number[randint(0, 9)]
-    password = password + the_random_character_array[int(list(clock)[1])]
+    password = password + the_random_character_array[int(list(clock)[randint(0, 1)])]
     for i in range(2):
         password = password + the_letter[randint(0, 25)]
     password = password + the_symbol[randint(0, 29)]
     for i in range(2):
-        password = password + the_random_character_array[int(list(clock)[1])]
+        password = password + the_random_character_array[int(list(clock)[randint(0, 1)])]
     for i in range(4):
         password = password + the_symbol[randint(0, 29)]
     password = password + the_number[randint(0, 9)]
